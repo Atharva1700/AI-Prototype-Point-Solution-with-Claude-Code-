@@ -1,0 +1,41 @@
+case_id,employee,merchant,category,amount,expense_date,has_receipt,history_meals_same_day,history_duplicate,days_before_today,expected_verdict,expected_rules
+G01,E1,Hotel Alpha,lodging,180.00,today,yes,0,no,0,approved,
+G02,E1,Hotel Alpha,lodging,180.00,today,no,0,no,0,needs_review,P1
+G03,E1,Cafe Beta,meals,24.99,today,no,0,no,0,approved,
+G04,E1,Cafe Beta,meals,25.00,today,no,0,no,0,approved,
+G05,E1,Cafe Beta,meals,25.01,today,no,0,no,0,needs_review,P1
+G06,E1,Airline Gamma,travel,300.00,today,yes,0,no,61,rejected,P2
+G07,E1,Airline Gamma,travel,300.00,today,yes,0,no,60,approved,
+G08,E2,Taxi Delta,travel,20.00,today,yes,0,no,-1,rejected,P2
+G09,E2,Client dinner,meals,40.00,today,yes,50.00,no,0,needs_review,P3
+G10,E2,Client dinner,meals,35.00,today,yes,40.00,no,0,approved,
+G11,E2,Client dinner,meals,35.01,today,yes,40.00,no,0,needs_review,P3
+G12,E3,Office Store,supplies,600.00,today,yes,0,no,0,needs_review,P4
+G13,E3,Office Store,supplies,500.00,today,yes,0,no,0,approved,
+G14,E3,Gym,fitness,40.00,today,yes,0,no,0,rejected,P5
+G15,E3,Gym,Meals,40.00,today,yes,0,no,0,rejected,P5
+G16,E3,Stationery,supplies,0.00,today,yes,0,no,0,rejected,P6
+G17,E3,Stationery,supplies,-5.00,today,yes,0,no,0,rejected,P6
+G18,E3,Stationery,supplies,10.005,today,yes,0,no,0,rejected,P6
+G19,E4,Rail Epsilon,travel,90.00,today,yes,0,yes,0,needs_review,P7
+G20,E4,Rail Epsilon,travel,90.00,today,yes,0,no,0,approved,
+G21,E4,Hotel Zeta,lodging,30.00,today,no,0,no,0,needs_review,P1
+G22,E4,Office Store,supplies,600.00,today,no,0,no,0,needs_review,"P1,P4"
+G23,E4,Cafe Beta,meals,80.00,today,yes,0,no,0,needs_review,P3
+G24,E5,Taxi Delta,travel,15.00,today,no,0,no,0,approved,
+G25,E5,Cafe Beta,meals,70.00,today,yes,0,no,0,approved,
+G26,E5,Cafe Beta,meals,6.00,today,yes,70.00,no,0,needs_review,P3
+G27,E5,Hotel Alpha,lodging,500.01,today,yes,0,no,0,needs_review,P4
+G28,E5,Hotel Alpha,lodging,25.00,today,no,0,no,30,approved,
+G29,E5,Hotel Alpha,lodging,25.01,today,no,0,no,30,needs_review,P1
+G30,E6,Print shop,supplies,12.34,today,yes,0,no,0,approved,
+G31,E6,Print shop,supplies,12.34,today,yes,0,yes,0,needs_review,P7
+G32,E6,Airline Gamma,travel,250.00,today,yes,0,no,59,approved,
+G33,E6,Airline Gamma,travel,250.00,today,yes,0,no,62,rejected,P2
+G34,E6,Client lunch,meals,20.00,today,yes,55.00,no,0,approved,
+G35,E6,Client lunch,meals,19.99,today,yes,55.00,no,0,approved,
+G36,E7,Hotel Zeta,lodging,0.01,today,yes,0,no,0,approved,
+G37,E7,Hotel Zeta,lodging,-0.01,today,yes,0,no,0,rejected,P6
+G38,E7,Supplies Co,supplies,600.00,today,yes,0,no,0,needs_review,P4
+G39,E7,Supplies Co,Travel,100.00,today,yes,0,no,0,rejected,P5
+G40,E7,Cafe Beta,meals,50.00,today,yes,25.00,no,0,approved,
